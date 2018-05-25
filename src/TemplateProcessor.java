@@ -1,8 +1,6 @@
 public class TemplateProcessor {
 
-    public String process(String sourceTemplate, String reqId, String code) {
-
-        String template = sourceTemplate;
+    public String process(String template, String reqId, String code) {
 
         // Substitute for %CODE%
         int templateSplitBegin = template.indexOf("%CODE%");
