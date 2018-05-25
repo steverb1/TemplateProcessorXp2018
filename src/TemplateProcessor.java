@@ -1,14 +1,3 @@
-/*
-adapted from Refactoring Workbook
-Book by William C. Wake
-*/
-
-import java.lang.StringBuilder;
-
-/**
- * Hello world!
- *
- */
 public class TemplateProcessor {
 
     public String process(String sourceTemplate, String reqId, String code) {
@@ -23,8 +12,6 @@ public class TemplateProcessor {
         String templatePartTwo = new String(template.substring(
                 templateSplitEnd, template.length()));
         code = new String(reqId);
-        //StringBuilder sb = new StringBuilder();
-        //sb.append(templatePartOne).append(code).append(templatePartTwo);
         template = new String(templatePartOne + code + templatePartTwo);
 
         // Substitute for %ALTCODE%
