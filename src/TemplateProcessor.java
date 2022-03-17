@@ -21,11 +21,6 @@ public class TemplateProcessor {
 
     private String replace(String template, String reqId, String variableName)
     {
-        int templateSplitBegin = template.indexOf(variableName);
-        int templateSplitEnd = templateSplitBegin + variableName.length();
-        String templatePartOne = template.substring(0, templateSplitBegin);
-        String templatePartTwo = template.substring(templateSplitEnd);
-        template = templatePartOne + reqId + templatePartTwo;
-        return template;
+        return template.replace(variableName, reqId);
     }
 }
